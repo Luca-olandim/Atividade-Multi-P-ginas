@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão1</title>
+</head>
+<body>
+    <p>Insira o valor do produto:</p>
+    <input id="preco" type="number">
+    <p>Insira o valor pago pelo cliente:</p>
+    <input id="pagamento" type="number"><br><br>
+    <button onclick="troco()">Calcular</button><br>
+    <p id= "resposta"></p>
+    <script>function troco(){
+        var preco = Number(document.getElementById("preco").value)
+        var pago = Number(document.getElementById("pagamento").value)
+        var resultado = pago-preco
+        if(resultado <0){
+            document.getElementById("resposta").innerHTML = "Ainda falta pagar: "+resultado*-1
+        }
+        else if(resultado >0){
+            document.getElementById("resposta").innerHTML = "Troco: "+resultado
+        }
+        else{
+            document.getElementById("resposta").innerHTML = "Valor total pago"
+        }
+    }
+    </script>
+</body>
+</html>

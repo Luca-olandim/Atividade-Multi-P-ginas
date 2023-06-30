@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão3</title>
+</head>
+<body>
+    <h1>Contador de números pares</h1>
+    <p>Insira um número inteiro:</p>
+    <input id="numero" type="number"><br><br>
+    <button onclick="contadorNumerosPares()">Calcular</button><br>
+    <p id= "Quantidade de números pares existentes entre 0 e o número digitado."></p>
+    <script>function contadorNumerosPares(){
+       var num = Number(document.getElementById("numero").value);
+       var numerosPares = 0;
+        while (num > 0){
+            if(num % 2 === 0){
+                numerosPares++;
+            }
+            num--;
+        }
+    document.getElementById("Quantidade de números pares existentes entre 0 e o número digitado.").innerHTML = "A quantidade de números pares existentes entre 0 e o número digitado é de "+ numerosPares
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão2</title>
+</head>
+<body>
+    <h1>Autonomia do veículo</h1>
+    <p>Insira a distância percorrida:</p>
+    <input id="distancia" type="number">
+    <p>Insira a quantidade de litros gastos:</p>
+    <input id="litros" type="number"><br><br>
+    <button onclick="autonomia()">Calcular</button><br>
+    <p id= "Autonomia do veículo"></p>
+    <script>function autonomia(){
+        var distancia = Number(document.getElementById("distancia").value)
+        var litros = Number(document.getElementById("litros").value)
+        var autonamia = distancia/litros
+        document.getElementById("Autonomia do veículo").innerHTML = "A autonomia do veículo é de " + autonamia + " km por litro."
+        
+    }
+    </script>
+</body>
+</html>
