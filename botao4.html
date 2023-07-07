@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão 4</title>
+</head>
+<body>
+    <h1>Contador de números primos</h1>
+    <p>Insira um número inteiro:</p>
+    <input id="numero" type="number"><br><br>
+    <button onclick="contadorNumerosPrimos()">Calcular</button><br>
+    <p id= "resultado"></p>
+    <script>
+    function contadorNumerosPrimos(){
+        var numDigitado = Number(document.getElementById("numero").value)
+        var quantidade = 0
+        var numAnalisado = 1
+        while(numAnalisado < numDigitado){
+            var candidato = 1
+            var divisores = 0
+            while(candidato <= numAnalisado){
+                if(numAnalisado % candidato == 0){
+                    divisores ++
+                }
+                candidato ++
+            }
+            if(divisores == 2){
+                quantidade ++
+            }
+            numAnalisado ++
+        }
+        document.getElementById("resultado").innerHTML = "A quantidade de números primos existentes entre 0 e o número digitado é de "+ quantidade
+    }
+    </script>
+</body>
+</html>
