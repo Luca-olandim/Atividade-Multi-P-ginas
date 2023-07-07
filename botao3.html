@@ -11,7 +11,7 @@
     <p>Insira um número inteiro:</p>
     <input id="numero" type="number"><br><br>
     <button onclick="contadorNumerosPares()">Calcular</button><br>
-    <p id= "Quantidade de números pares existentes entre 0 e o número digitado."></p>
+    <p id= "resposta"></p>
     <script>function contadorNumerosPares(){
        var num = Number(document.getElementById("numero").value);
        var numerosPares = 0;
@@ -21,7 +21,7 @@
             }
             num--;
         }
-    document.getElementById("Quantidade de números pares existentes entre 0 e o número digitado.").innerHTML = "A quantidade de números pares existentes entre 0 e o número digitado é de "+ numerosPares
+    document.getElementById("resposta").innerHTML = "A quantidade de números pares existentes entre 0 e o número digitado é de "+ numerosPares
     }
     </script>
 </body>
